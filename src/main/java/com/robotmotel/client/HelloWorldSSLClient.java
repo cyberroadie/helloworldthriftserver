@@ -23,7 +23,7 @@ public class HelloWorldSSLClient {
     }
 
     public static void startServer() throws TException {
-        TTransport transport = TSSLTransportFactory.getClientSocket("127.0.0.1", 1443);
+        TTransport transport = TSSLTransportFactory.getClientSocket("www.cyberroadie.org", 1443);
 
         TProtocol protocol = new TBinaryProtocol(transport);
         HelloWorld.Client client = new HelloWorld.Client(protocol);

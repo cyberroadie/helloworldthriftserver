@@ -24,7 +24,7 @@ public class HelloWorldClient {
     }
 
     public static void startServer() throws TException {
-        TTransport transport = new TSocket("localhost", 4242);
+        TTransport transport = new TSocket("www.cyberroadie.org", 4242);
         transport.open();
         TProtocol protocol = new TBinaryProtocol(transport);
         HelloWorld.Client client = new HelloWorld.Client(protocol);
