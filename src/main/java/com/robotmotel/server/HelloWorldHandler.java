@@ -24,6 +24,7 @@ public class HelloWorldHandler implements HelloWorld.Iface {
 
     @Override
     public HelloResponse getHello(HelloRequest helloRequest) throws TException {
+        logger.info("Hello " + helloRequest.getName());
         HelloResponse helloResponse = new HelloResponse();
         helloResponse.setGreeting("Hello " + helloRequest.getName() + "!");
         UUID uuid = UUID.randomUUID();
